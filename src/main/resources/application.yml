@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  application:
+    name: user
+  datasource:
+    url: jdbc:postgresql://localhost:5432/meubanco
+    username: admin
+    password: senha123
+
+api:
+  security:
+    token:
+      secret: final-project
+

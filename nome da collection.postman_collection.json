@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "3d52b930-2e1a-445d-8448-0212a05de276",
+		"name": "nome da collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34221284"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"user123456\",\r\n    \"password\": \"teste#1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/leitor/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leitor",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"teste da silve\",\r\n    \"mail\": \"pvelli@gmail.com\",\r\n    \"login\": \"user1234567\",\r\n    \"password\": \"teste#1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/leitor/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leitor",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6InVzZXIxMjM0NTYiLCJleHAiOjE3MzMxMTYxNzB9.xEWjLkqGQi-cKQsDw-LI5SpCQUnY2aRNgFEsUluS5F0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/leitor/d8311b34-5b8b-46b3-8556-5a78f46e39ae",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leitor",
+						"d8311b34-5b8b-46b3-8556-5a78f46e39ae"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

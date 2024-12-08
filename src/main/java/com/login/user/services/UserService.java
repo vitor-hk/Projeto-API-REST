@@ -119,7 +119,7 @@ public class UserService implements UserDetailsService {
     }
 
     public void deleteAllUsers() {
-        usersRepository.deleteAll();
+        usersRepository.deleteAll(); // Deleta todos os usuários do repositório
     }
 
     @Override

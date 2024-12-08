@@ -125,16 +125,16 @@ public class UserController {
 
     @Operation(description = "Deleta todos os usuários cadastrados")
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Todos os usuários foram deletados com sucesso"),
-        @ApiResponse(responseCode = "403", description = "Token inválido")
-    })
-    @DeleteMapping("/delete_all")
-    public ResponseEntity<Map<String, String>> deleteAllUsers() {
-        userService.deleteAllUsers();
-        
-        Map<String, String> message = Map.of("message", "Todos os usuários foram deletados com sucesso!");
-        return ResponseEntity.ok().body(message);
-    }
+    @ApiResponse(responseCode = "200", description = "Todos os usuários foram deletados com sucesso"),
+    @ApiResponse(responseCode = "403", description = "Token inválido")
+})
+@DeleteMapping("/delete_all")
+public ResponseEntity<Map<String, String>> deleteAllUsers() {
+    userService.deleteAllUsers(); // Chama o serviço para deletar todos os usuários
+    
+    Map<String, String> message = Map.of("message", "Todos os leitores foram deletados com sucesso!");
+    return ResponseEntity.ok().body(message);
+}
 
     private String validationErrors(BindingResult result) {
         StringBuilder errors = new StringBuilder();
